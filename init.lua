@@ -52,8 +52,16 @@ plugs = {
 		dependencies = {'nvim-lua/plenary.nvim'}
 	},
 	{
-		"folke/trouble.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },	
+	"folke/trouble.nvim",
+	dependencies = { "nvim-tree/nvim-web-devicons" },	
+	},
+	{
+		"hrsh7th/nvim-cmp",
+		dependencies = {"hrsh7th/cmp-nvim-lsp"}
+	
+	},
+	{
+		"preservim/nerdtree"
 	}
 } 
 

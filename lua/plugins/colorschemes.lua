@@ -3,11 +3,12 @@ return {
   	{ "Mofiqul/dracula.nvim" },
   	{'markvincze/panda-vim'},
 	{"sainnhe/everforest"},
-  -- Configure LazyVim to load dracula
+  {"folke/tokyonight.nvim"},
+	{"catppuccin/nvim"},
   	{
     		"LazyVim/LazyVim",
     		opts = {
-     	 		colorscheme = "dracula",
+     	 		colorscheme = "catppuccin-frappe",
     		},
   	},
 	

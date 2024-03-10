@@ -24,13 +24,15 @@ require("lazy").setup({
 	{ import = "plugins"}, {import = "plugins.lsp"}
 	},{})
 --telescope
-vim.cmd("autocmd VimEnter * NERDTree")
+--vim.cmd("autocmd VimEnter * NERDTree")
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
+--NERDTree
+vim.keymap.set('n', '<leader>n', ':NERDTree<CR>')
 
 --nvim dab
 --vim.api.nvim_set_keymap("n", "<leader>du", ":DapUiToggle<Cr>", {noremap=true})

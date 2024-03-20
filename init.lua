@@ -1,9 +1,13 @@
 vim.cmd("set number")
 vim.cmd("set modifiable")
-vim.cmd("set tabstop=3")
+vim.cmd("set tabstop=2")
 vim.cmd("set shiftwidth=2")
+vim.cmd("set expandtab")
+vim.cmd("set softtabstop=2")
 vim.cmd('autocmd BufRead, BufNewFile *.flex set filetype=c')
 vim.cmd("autocmd BufRead, BufNewFile *.c set filetype=java")
+vim.cmd("set listchars=tab:»·,trail:·")
+vim.cmd("set list")
 --Lazy vim Setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -38,21 +42,6 @@ vim.keymap.set('n', '<leader>n', ':NERDTree<CR>')
 --vim.api.nvim_set_keymap("n", "<leader>du", ":DapUiToggle<Cr>", {noremap=true})
 --vim.cmd.set("n", "<leader>dp", ":lua require('dapui').open({reset = true})<CR>", {noremap = true})
 
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true,
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = true,
-  },
-}
-
-require'nvim-treesitter.configs'.setup {
-  -- A list of parser names, or "all" (the five listed parsers should always be installed)
-  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "java", "regex"},
-}
 
 --require("dapui").setup()
 

@@ -1,5 +1,6 @@
 return{
   "lukas-reineke/indent-blankline.nvim",main = "ibl", opts = {}, 
+  --[[
   config = function ()
     local highlight =  {
      "RainbowRed",
@@ -22,4 +23,5 @@ return{
     end)
     require("ibl").setup({ indent = {highlight = highlight}})
   end
+  --]]
 }
